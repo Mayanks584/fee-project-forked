@@ -41,7 +41,7 @@
   --z-tooltip: 10;
   --z-fixed: 100;
 }
-
+/* responsive typography */
 @media screen and (min-width: 968px) {
   :root {
     --biggest-font-size: 7.5rem;
@@ -112,8 +112,8 @@ img {
   margin-bottom: var(--mb-2-5);
 }
 
-.section__title-gradient {
-  background: var(--text-gradient);
+.section__title-gradient { /* this is sponsor css and feauture */
+  background: var(--text-gradient); 
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -121,7 +121,7 @@ img {
 
 /*=============== LAYOUT ===============*/
 .main {
-  overflow: hidden;
+  overflow: hidden; /* for animation and images */
 }
 
 .container {
@@ -140,7 +140,7 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: var(--z-fixed);
+  z-index: var(--z-fixed); /* use to pic the element and the images */
   background: transparent;
 }
 
@@ -190,12 +190,12 @@ img {
   background: var(--text-gradient);
   color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
+  background-clip: text; /* use to show color dark of nav bar items */
   transition: .4s;
 }
 
 .nav__link:hover {
-  background: var(--white-color);
+  background: var(--white-color); /* use to white when the mouse on it */
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -242,7 +242,7 @@ img {
 }
 @keyframes img {
   0% { opacity: 0;
-       transform: translateY(-70px);
+       transform: translateY(-70px);  /*ye img ki animation */
       }
   100% {
     opacity: 1;
@@ -261,19 +261,19 @@ img {
 }
 
 .home__title {
-  position: absolute;
+  position: absolute; /* this is parargraph tag data all this home title  */
   top: -4rem;
   left: 1rem;
   line-height: 6rem;
   font-size: var(--biggest-font-size);
-  background: var(--text-gradient);
+  background: var(--text-gradient); 
   color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
+  background-clip: text; /* this is smartphone line which is dimb in backgroung */ 
 }
 
 .home__subtitle {
-  font-size: var(--big-font-size);
+  font-size: var(--big-font-size); /* product overview */
   margin-bottom: var(--mb-2-5);
 }
 
@@ -284,7 +284,7 @@ img {
 }
 
 .home__description {
-  margin-bottom: var(--mb-2-5);
+  margin-bottom: var(--mb-2-5); /* use to between gap in text */
   line-height: var(--text-line-height);
 }
 
@@ -298,7 +298,7 @@ img {
 .button {
   display: inline-block;
   background-color: var(--black-color);
-  color: var(--white-color);
+  color: var(--white-color); /* button of main product */
   padding: 1rem 1.25rem;
   border-radius: .5rem;
   transition: .3s;
@@ -309,7 +309,7 @@ img {
 }
 
 .button__icon {
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* lock icon */
 }
 
 .button--flex {
@@ -330,7 +330,7 @@ img {
   align-items: center;
 }
 
-/*=============== SPECS ===============*/
+/*=============== feature ===============*/
 .specs__container {
   position: relative;
 }
@@ -343,7 +343,7 @@ img {
   display: grid;
   row-gap: .25rem;
 }
-
+ 
 .specs__icon {
   font-size: 1.2rem;
   color: var(--white-color);
@@ -372,7 +372,7 @@ img {
 /*=============== CASE ===============*/
 .case__container {
   position: relative;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 1fr stands for "1 fraction of the available space.*/
 }
 
 .case__data {

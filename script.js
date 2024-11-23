@@ -25,7 +25,7 @@ const navLink = document.querySelectorAll('.nav__link')
 function linkAction(){
     const navMenu = document.getElementById('nav-menu') /* navigation of menu elements by nav menu id */
     // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu') 
+    navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 /* this is use for responsive when we click the nav
@@ -42,8 +42,9 @@ window.addEventListener('scroll', scrollHeader)
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
     // When the scroll is higher than 200 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if(this.scrollY >= 200) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
-}/*this  is abouut speed of scrolling if greater then 200 it do then it add show scrool to make button visible*/
+    if(this.scrollY >= 200) scrollUp.classList.add
+    /*when it is more then 200 then it add scroll up into show scrooll*/('show-scroll'); else scrollUp.classList.remove('show-scroll')
+}/*this  is abouut speed of scrolling if greater then 200 it do then it add show scrool to make button visible*`/
 window.addEventListener('scroll', scrollUp)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/

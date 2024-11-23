@@ -678,7 +678,7 @@ img {
     justify-content: center;
   }
 }
-
+  
 @media screen and (min-width: 767px) {
   body {
     margin: 0;
@@ -785,46 +785,4 @@ img {
   .footer__copy {
     margin-top: 9rem;
   }
-}
-
-/* Rating System Styles */
-.rating {
-    padding: 2rem 0;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.rating.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.rating__container {
-    display: inline-block;
-}
-
-.rating__stars {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.rating__stars i {
-    font-size: 2rem;
-    cursor: pointer;
-    color: #ccc;
-    transition: color 0.3s;
-}
-
-.rating__stars i:hover,
-.rating__stars i.active {
-    color: #ffcc00;
-}
-
-.rating__text {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: #666;
 }

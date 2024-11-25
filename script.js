@@ -68,12 +68,11 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+
 const sr = ScrollReveal({
     distance: '60px',
-    duration: 2500,/*  2.5 sec*/
-    delay: 400, /* it gives a slight pause of 400milisecomd before the animation start*/
-    // reset: true
+    duration: 2500,
+    delay: 400, 
 })
 /* reveal is use to animate different elements */
 sr.reveal(`.home__header, .section__title`,{delay: 600})
@@ -101,9 +100,21 @@ document.getElementById('submit-review').addEventListener('click', () => {
         return;
     }
 
-    addReview(name, reviewText);
+    // Create the content for the text file
+    const content = `Name: ${name}\nReview: ${reviewText}\n\n`;
 
+    
+    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+
+    // Save the file using FileSaver.js
+    saveAs(blob, 'Storage.txt');
+
+   
+
+    // Clear the input fields
     document.getElementById('reviewer-name').value = '';
     document.getElementById('review-text').value = '';
 });
+
+
 

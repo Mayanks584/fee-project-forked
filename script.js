@@ -107,20 +107,3 @@ document.getElementById('submit-review').addEventListener('click', () => {
     document.getElementById('review-text').value = '';
 });
 
-function addReview(name, reviewText) {
-    const reviewsList = document.getElementById('reviews-list');
-    const reviewElement = document.createElement('div');
-    reviewElement.classList.add('review');
-
-    const reviewName = document.createElement('h4');
-    reviewName.classList.add('review__name');
-    reviewName.textContent = name;
-
-    const reviewContent = document.createElement('p');
-    reviewContent.classList.add('review__text');
-    reviewContent.textContent = reviewText;
-
-    reviewElement.appendChild(reviewName);
-    reviewElement.appendChild(reviewContent);
-    reviewsList.appendChild(reviewElement);
-}

@@ -786,3 +786,65 @@ img {
     margin-top: 9rem;
   }
 }
+
+.styled-list {
+  list-style-type: disc; /* Change bullet type */
+  padding-left: 20px; /* Indent the list */
+  margin: 0; /* Remove default margin */
+}
+
+.styled-list li {
+  margin-bottom: 10px; /* Space between list items */
+  font-size: var(--normal-font-size); /* Font size */
+  color: var(--text-color); /* Text color */
+  line-height: var(--text-line-height); /* Line height */
+}
+/*=============== REVIEWS ===============*/
+.reviews__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.reviews__form {
+    background-color: var(--container-color);
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.reviews__form-title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-1);
+    color: var(--title-color);
+}
+
+.reviews__input {
+    width: 100%;
+    padding: .75rem;
+    margin-bottom: var(--mb-1);
+    border-radius: .5rem;
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+.reviews__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.review {
+    background-color: var(--container-color);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.review__name {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+.review__text {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+}

@@ -20,7 +20,7 @@ if(navClose){
 }
 
 /*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll('.nav__link')
+const navLink = document.querySelectorAll('.nav__link') 
 
 function linkAction(){
     const navMenu = document.getElementById('nav-menu') /* navigation of menu elements by nav menu id */
@@ -84,4 +84,43 @@ sr.reveal(`.sponsor__img, .products__card, .footer__logo, .footer__content, .foo
 sr.reveal(`.specs__data, .discount__animate`,{origin: 'left', interval: 100})
 sr.reveal(`.specs__img, .discount__img`,{origin: 'right'})
 sr.reveal(`.case__img`,{origin: 'top'})
-sr.reveal(`.case__data`)/* this is default setting of distance delay and duration */
+sr.reveal(`.case__data`)
+sr.reveal(`.reviews__container`, {
+    origin: 'bottom',    // Animation starts from the bottom
+    distance: '50px',    // Elements move 50px during animation
+    duration: 2000,      // Animation lasts 2000ms (2 seconds)
+    delay: 400,          // Delay before animation starts
+});/* this is default setting of distance delay and duration */
+//  review product
+document.getElementById('submit-review').addEventListener('click', () => {
+    const name = document.getElementById('reviewer-name').value.trim();
+    const reviewText = document.getElementById('review-text').value.trim();
+
+    if (name === '' || reviewText === '') {
+        alert('Please fill out both fields.');
+        return;
+    }
+
+    addReview(name, reviewText);
+
+    document.getElementById('reviewer-name').value = '';
+    document.getElementById('review-text').value = '';
+});
+
+function addReview(name, reviewText) {
+    const reviewsList = document.getElementById('reviews-list');
+    const reviewElement = document.createElement('div');
+    reviewElement.classList.add('review');
+
+    const reviewName = document.createElement('h4');
+    reviewName.classList.add('review__name');
+    reviewName.textContent = name;
+
+    const reviewContent = document.createElement('p');
+    reviewContent.classList.add('review__text');
+    reviewContent.textContent = reviewText;
+
+    reviewElement.appendChild(reviewName);
+    reviewElement.appendChild(reviewContent);
+    reviewsList.appendChild(reviewElement);
+}
